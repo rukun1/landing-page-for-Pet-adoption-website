@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet.com</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #000000;
+            background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+
+        }
+
+        .container {
+            width: 100%;
+
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            background: url(../img/bg2.jpg)no-repeat center center/cover;
+            height: 8vh;
+            z-index: -1;
+            opacity: 0.9;
+        }
+
+        #navbar {
+            display: grid;
+        }
+
+
+
+
+
+        #navigation h1 {
+            float: left;
+            padding: 13px 12px;
+            color: whitesmoke;
+        }
+
+
+
+        #navbar #navigation img {
+            height: 55px;
+            float: left;
+            padding: 2px 21px;
+        }
+
+        #navigation .item {
+            float: left;
+            padding: 17px 50px;
+            margin-left: 17px;
+            position: relative;
+            font-size: 1.5rem;
+            left: 40px;
+
+        }
+
+        #navigation .item a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        #navigation .item a:hover {
+
+            color: rgb(207, 189, 189);
+        }
+
+        #navigation .item a select {
+            padding: 5px 10px;
+            font-size: 1rem;
+        }
+
+
+        #navigation .btn input {
+            float: right;
+            top: 11px;
+            right: 50px;
+            position: relative;
+            font-size: 1rem;
+            padding: 8px 26px;
+            cursor: pointer;
+
+            border-radius: 20px;
+            border: 2px solid indianred;
+
+        }
+
+        #navigation .btn input:hover {
+
+            background-color: rgb(211, 206, 206);
+
+        }
+
+        /* HOME SECTION USING CSS GRID */
+
+        .section {
+            display: grid;
+            grid-template-areas:
+                "notification notification notification notification"
+                "home home home join"
+                "products products services services";
+        }
+
+        #notification {
+            grid-area: notification;
+            margin-top: 30px;
+            padding: 8px 16px;
+            font-size: 2rem;
+            background-color: black;
+            color: turquoise;
+
+        }
+
+        #home {
+            grid-area: home;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            width: 75.15%;
+            background: url(../img/bg3.jpg)no-repeat center center/cover;
+            height: 62vh;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #home h1 {
+            color: white;
+            /* font-size: 29px; */
+            font-size: 100px;
+            padding: 3px 15px;
+        }
+
+
+        #join {
+            grid-area: join;
+        }
+
+        #join::before {
+            content: "";
+            position: absolute;
+            width: 24.5%;
+            background: url(../img/bg1.jpg)no-repeat center center/cover;
+            height: 62vh;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        #join h1 {
+            text-align: center;
+            /* margin: 0px 0px; */
+            margin-top: 65px;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            color: whitesmoke;
+        }
+
+        #join #joinform form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #join #joinform form label {
+            color: whitesmoke;
+        }
+
+        #join #joinform form button {
+            padding: 4px 20px;
+            margin-top: 70px;
+            margin-bottom: 140px;
+            border-radius: 20px;
+        }
+
+        #join #joinform form button input {
+            font-size: 1rem;
+        }
+
+        /* PRODUCTS SECTION USING CSS */
+
+
+        #products {
+            grid-area: products;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #products img {
+            width: 370px;
+            display: block;
+            margin: auto;
+        }
+
+        #products h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 4rem;
+            margin-bottom: 60px;
+        }
+
+        /* #products h2 {} */
+
+
+        #services {
+            grid-area: services;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #services img {
+            width: 173px;
+            display: block;
+            margin: auto;
+        }
+
+        #services h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 4rem;
+            margin-bottom: 60px;
+
+        }
+
+
+        .part {
+
+            border: 10px solid darkturquoise;
+            margin: 40px 0px;
+            display: block;
+            width: 70%;
+            border-radius: 30px;
+            text-align: center;
+            height: 57vh;
+            color: whitesmoke;
+        }
+
+        #products p,
+        #services p {
+            margin: 18px 0px;
+            font-size: 20px;
+
+        }
+
+        .content {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                "available"
+                "articles"
+                "contact";
+            margin-top: 20px;
+
+        }
+
+        /* SECTION AVAILABLE */
+
+        #available {
+            grid-area: available;
+        }
+
+        #available::before {
+            content: "";
+            position: absolute;
+            width: 99.9%;
+            background: url(../img/pexels-buenosia-carol-1543793.jpg)no-repeat center center/cover;
+            height: 74vh;
+            z-index: -1;
+            opacity: 0.3;
+
+        }
+
+        #available h1 {
+            color: whitesmoke;
+            margin: 14px 0px;
+            text-align: center;
+            font-size: 3rem;
+            text-decoration: underline;
+        }
+
+        #available .adoption {
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            /* flex-basis: ; */
+            margin: 80px 0px;
+            padding: 5px 6px;
+
+
+        }
+
+        #available .adoption .adoption-item {
+            width: 400px;
+            border: 5px solid darkturquoise;
+            height: 400px;
+            margin: 0px 11px;
+            border-radius: 160px;
+        }
+
+
+        #available img {
+            height: 200px;
+            display: block;
+            margin: auto;
+        }
+
+        #available h2 {
+            text-align: center;
+            color: whitesmoke;
+            margin: 40px 0px;
+        }
+
+        /* UTILITY CLASSES */
+        /* .border {
+            border: 2px solid red;
+            background-color: yellow;
+        } */
+
+        .padding {
+            padding: 5px 10px;
+            font-size: 1rem;
+            margin: 9px 1px;
+            border-radius: 15px;
+        }
+
+        /* SECTION ARTICLES */
+        #articles {
+            grid-area: articles;
+        }
+
+        #articles::before {
+            content: "";
+            position: absolute;
+            width: 99.9%;
+            background: url(../img/pexels-helena-lopes-1938125.jpg)no-repeat center center/cover;
+            height: 75vh;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        #articles #heading {
+            color: whitesmoke;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 3rem;
+            margin: 25px 0px;
+
+        }
+
+        #articles .article-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #articles .article-box .article-item {
+            border: 5px solid darkturquoise;
+            width: 400px;
+            height: 420px;
+            margin: 60px 13px;
+
+        }
+
+        #articles img {
+            width: 375px;
+            display: block;
+            margin: auto;
+            margin: 15px 14px;
+            height: 210px;
+
+        }
+
+        #articles p {
+            color: whitesmoke;
+            padding: 0px 17px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .article-item h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: whitesmoke;
+            margin: 26px 3px;
+
+        }
+
+        #articles button {
+            position: relative;
+            /* float: left; */
+            /* display: block; */
+            top: 22px;
+            left: 270px;
+            padding: 5px 3px;
+            font-weight: bolder;
+            border: 3px solid darkturquoise;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            background-color: darkturquoise;
+            color: whitesmoke;
+        }
+
+        /* CONTACT SECTION */
+
+        #contact {
+            grid-area: contact;
+        }
+        #contact::before{
+            content: "";
+            position: absolute;
+            width: 99.9%;
+            background: url(../img/pexels-caio-56733.jpg)no-repeat center center/cover;
+            height: 62vh;
+            z-index: -1;
+            opacity: 0.4;
+
+        }
+
+        #contact h1 {
+            color: whitesmoke;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 3rem;
+            margin: 25px 0px;
+
+        }
+
+        #contact .contact-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 20px;
+            color: whitesmoke;
+        }
+
+       
+
+        #contact input,
+        #contact textarea {
+
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-family: 'Sansita Swashed', cursive;
+
+        }
+        /* FOOTER */
+        footer{
+            color: whitesmoke;
+            text-align: center;
+            padding: 2px 3px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar">
+            <div id="navigation">
+                <div>
+                    <img src="../img/logo.png" alt="">
+                    <h1>| Adopet</h1>
+                </div>
+                <div class="item"><a href="#">Home</a></div>
+                <div class="item"><a href="#">
+                        <form action="backend.php">Category
+                            <select name="Category" id="Category">
+                                <option value="dg">Dogs</option>
+                                <option value="ct">Cats</option>
+                                <option value="bd">Birds</option>
+                                <option value="Tortoise"></option>
+                            </select>
+                        </form>
+                    </a></div>
+                <div class="item"><a href="#">Products and Services</a></div>
+                <div class="item"><a href="#">About Us</a></div>
+
+                <div class="btn">
+                    <input type="button" value="Contact Us">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="section">
+        <section id="notification" class="border">Notifications Updates/: NO New Updates!</section>
+        <section id="home" class="border">
+            <h1>
+                Adoption
+            </h1>
+            <h1>is </h1>
+            <h1>better.</h1>
+            <h1>Save life.</h1>
+
+        </section>
+        <section id="join" class="border">
+            <h1>Join Us</h1>
+            <div id="joinform">
+                <form action="backend.php">
+                    <div>
+                        <label for="Name">Name :
+                            <input class="padding" type="text" placeholder="Enter your name">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="Number">Number :
+                            <input class="padding" type="number" placeholder="Enter your number">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="Email">Email :
+                            <input class="padding" type="email" placeholder="Enter your email">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="Submit">
+                            <button>
+                                <input type="button" value="Submit">
+                            </button>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="products" class="border">
+            <div class="part">
+                <h1>Our Products</h1>
+                <div>
+                    <img src="../img/food.png" alt="">
+                </div>
+                <div>
+                    <!-- <h2>Dog products</h2>
+                <h2>Cat products</h2>
+                <h2>Bird products</h2>
+                <h2>Tortoise products</h2> -->
+                    <p>buy our products <a href="#">here</a>. Give your pets the best treats </p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, amet.</p>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="border">
+            <div class="part">
+                <h1>Our Services</h1>
+                <div>
+                    <img src="../img/services (1).png" alt="">
+                </div>
+                <div>
+                    <!-- <h2>Dog products</h2>
+                <h2>Cat products</h2>
+                <h2>Bird products</h2>
+                <h2>Tortoise products</h2> -->
+                    <p>buy our products <a href="#">here</a>. Give your pets the best treats </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, impedit.</p>
+                </div>
+            </div>
+        </section>
+        div
+
+    </div>
+    <div class="content">
+        <section id="available" class="border">
+            <div>
+                <h1>Available For Adoption</h1>
+            </div>
+            <div class="adoption">
+                <div class="adoption-item ">
+
+                    <div>
+                        <h1>DOGS</h1>
+                    </div>
+                    <div>
+                        <img src="../img/puppy.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>
+                            BREEDS Available
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="adoption-item ">
+
+                    <div>
+                        <h1>CATS</h1>
+                    </div>
+                    <div>
+                        <img src="../img/cat.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>
+                            BREEDS Available
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="adoption-item ">
+
+                    <div>
+                        <h1>BIRDS</h1>
+                    </div>
+                    <div>
+                        <img src="../img/bird.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>
+                            BREEDS Available
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="adoption-item ">
+
+                    <div>
+                        <h1>TORTOISE</h1>
+                    </div>
+                    <div>
+                        <img src="../img/tortoise.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>
+                            BREEDS Unavailable
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="articles" class="border">
+            <div>
+                <h1 id="heading">
+                    Top Articles
+                </h1>
+            </div>
+            <div class="article-box">
+                <div class="article-item">
+                    <div>
+                        <img src="https://cdn.mos.cms.futurecdn.net/GwY2uD9YcY2YKyhZH93jHc-1024-80.png.webp" alt="">
+                    </div>
+                    <div>
+                        <h1> Elusive Squid seen alive for the first time</h1>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus, omnis quod
+                            minima temporibus fugit.</p>
+                    </div>
+
+                </div>
+                <div class="article-item">
+                    <div>
+                        <img src="https://cdn.mos.cms.futurecdn.net/gaZro4jS4dL4ddgSGzgWMN-1024-80.jpg.webp" alt="">
+                    </div>
+                    <div>
+                        <h1>Monster bird fossils unearthed in Antartic.</h1>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus, omnis quod
+                            minima temporibus fugit.</p>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div>
+                        <img src="https://cdn.mos.cms.futurecdn.net/yen2yg49v7zQrnSaz3ofXT-1024-80.jpg.webp" alt="">
+                    </div>
+                    <div>
+                        <h1>little dinosaurs were worse in flying than chicken</h1>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus, omnis quod
+                            minima temporibus fugit.</p>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div>
+                        <img src="https://cdn.mos.cms.futurecdn.net/umsvusGFZTYVwquGgWUBN3-320-80.jpg.webp" alt="">
+                    </div>
+                    <div>
+                        <h1>Rare, two headed snake found by flourida cat</h1>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus, omnis quod
+                            minima temporibus fugit.</p>
+                    </div>
+                    <div>
+                        <button type="submit">
+                            More Articles >>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="border">
+            <div>
+                <h1>
+                    Contact Us
+                </h1>
+            </div>
+            <div class="contact-box">
+
+                <form action="backend.php">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </div>
+
+
+                    <div >
+                        <label for="number">Number:</label>
+                        <input type="number" name="number" id="number" placeholder="Enter your number">
+                    </div>
+
+                    <div >
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div >
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <input type="button" value="Submit">
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </section>
+    </div>
+    <footer>
+        <div>
+            Copyright &copy; Adopet.com. All Rights Reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
